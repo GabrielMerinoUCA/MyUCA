@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="ni.edu.uca.myuca.home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/acHome2_nuevoEstudiante"
+            app:destination="@id/nuevoEstudiante" />
+        <action
+            android:id="@+id/acHome2_modificarEstudiante"
+            app:destination="@id/modificarEstudiante" />
+    </fragment>
+    <fragment
+        android:id="@+id/nuevoEstudiante"
+        android:name="ni.edu.uca.myuca.NuevoEstudiante"
+        android:label="fragment_nuevo_estudiante"
+        tools:layout="@layout/fragment_nuevo_estudiante" >
+        <action
+            android:id="@+id/acNuevoEstudiante_Home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/modificarEstudiante"
+        android:name="ni.edu.uca.myuca.modificarEstudiante"
+        android:label="fragment_modificar_estudiante"
+        tools:layout="@layout/fragment_modificar_estudiante" >
+        <argument
+            android:name="estudiante"
+            app:argType="ni.edu.uca.myuca.Modelos.Estudiante" />
+        <action
+            android:id="@+id/acModificarEstudiante_home2"
+            app:destination="@id/home2" />
+    </fragment>
+</navigation>
