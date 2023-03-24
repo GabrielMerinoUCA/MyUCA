@@ -87,10 +87,11 @@ class modificarEstudiante : Fragment() {
                     try {
                         Log.wtf("AAAA", response.body()!!.string())
                         GlobalScope.launch(Dispatchers.Main) {
-                            Toast.makeText(context, "Yea boy?", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "Eliminado exitosamente", Toast.LENGTH_SHORT).show()
                         }
                     } catch (e: Exception) {
                         e.printStackTrace()
+                        Toast.makeText(context, "Error al eliminar", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
@@ -129,10 +130,11 @@ class modificarEstudiante : Fragment() {
                     try {
                         Log.wtf("AAAA", response.body()!!.string())
                         GlobalScope.launch(Dispatchers.Main) {
-                            Toast.makeText(context, "Yea boy?", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "Guardado exitosamente", Toast.LENGTH_SHORT).show()
                         }
                     } catch (e: Exception) {
                         e.printStackTrace()
+                        Toast.makeText(context, "Error de guardado", Toast.LENGTH_SHORT).show()
                     }
                 }
             }

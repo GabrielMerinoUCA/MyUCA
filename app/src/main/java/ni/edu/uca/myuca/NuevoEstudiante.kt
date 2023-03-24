@@ -86,10 +86,11 @@ class NuevoEstudiante : Fragment() {
                 response.use {
                     try {
                         GlobalScope.launch(Dispatchers.Main) {
-                            Toast.makeText(context, "Yea boy?", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "Guardado exitosamente", Toast.LENGTH_SHORT).show()
                         }
                     } catch (e: Exception) {
                         e.printStackTrace()
+                        Toast.makeText(context, "Error de guardado", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
